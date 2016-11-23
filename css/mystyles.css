@@ -8,7 +8,8 @@
   max-width: 100%;
   max-height: 100%;
 }
-.thumbnail_img{
-  /*width: 400px;*/
-
+.thumbnail {
+    .make-row();
+    .make-xs-column();
+    .make-sm-column();
 }
