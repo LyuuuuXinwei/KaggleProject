@@ -52,20 +52,50 @@
     <div class="container" style="padding-top:70px">
       <!-- <embed width="600" height="450" src="./Coursera-ML-Learning-Foundations.pdf" type="application/pdf"></embed> -->
       <div class="container">
-        <div class="row">
+        <div class="row row-content">
           <h3>Machine Learning Foundations: A Case Study</h3>
               <a class="btn btn-primary view-pdf"
-              href="./attachments/certifications/Coursera-ML-Learning-Foundations.pdf">View PDF</a>
+              href="./attachments/certifications/Coursera-WS-ML-Learning-Foundations.pdf">View PDF</a>
         </div>
-        <div class="row">
+        <div class="row row-content">
           <h3>Machine Learning: Regression</h3>
               <a class="btn btn-primary view-pdf"
-              href="./attachments/certifications/Coursera-ML-Learning-Foundations.pdf">View PDF</a>
+              href="./attachments/certifications/Coursera-WS-ML-Regression.pdf">View PDF</a>
         </div>
-        <div class="row">
+        <div class="row row-content">
           <h3>Machine Learning: Classification</h3>
               <a class="btn btn-primary view-pdf"
-              href="./attachments/certifications/Coursera-ML-Learning-Foundations.pdf">View PDF</a>
+              href="./attachments/certifications/Coursera-WS-ML-Classification.pdf">View PDF</a>
+        </div>
+        <div class="row row-content">
+          <h3>Machine Learning: Clustering and Retrieval <h1>Coming soon...<h1></h3>
+              <!-- <a class="btn btn-primary view-pdf"
+              href="./attachments/certifications/Coursera-WS-ML-Classification.pdf">View PDF</a> -->
+        </div>
+        <div class="row row-content">
+          <h3>Data Science: Statistical Inference</h3>
+              <a class="btn btn-primary view-pdf"
+              href="./attachments/certifications/Coursera-JH-DS-Statistical-Inference.pdf">View PDF</a>
+        </div>
+        <div class="row row-content">
+          <h3>Data Science: Developing Data Products</h3>
+              <a class="btn btn-primary view-pdf"
+              href="./attachments/certifications/Coursera-JH-DS-Developing_Data_Products.pdf">View PDF</a>
+        </div>
+        <div class="row row-content">
+          <h3>Data Science: Exploratory Data Analysis</h3>
+              <a class="btn btn-primary view-pdf"
+              href="./attachments/certifications/Coursera-JH-DS-Exploratory_Data_Analysis.pdf">View PDF</a>
+        </div>
+        <div class="row row-content">
+          <h3>Data Science: Reproducible Research</h3>
+              <a class="btn btn-primary view-pdf"
+              href="./attachments/certifications/Coursera-JH-DS-Reproducible_Research.pdf">View PDF</a>
+        </div>
+        <div class="row row-content">
+          <h3>Data Science: R Programming</h3>
+              <a class="btn btn-primary view-pdf"
+              href="./attachments/certifications/Coursera-JH-DS-R_Programming.pdf">View PDF</a>
         </div>
       </div>
     </div>
@@ -85,7 +115,7 @@
             var c=(b.scrollable==true)?'style="max-height: 450px;overflow-y: auto;"':"";
             // var c="";
             html='<div class="modal fade" id="myModal">';
-            html+='<div class="modal-dialog">';
+            html+='<div class="modal-dialog modal-lg role=document">';
             html+='<div class="modal-content">';
             html+='<div class="modal-header">';
             html+='<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
@@ -110,7 +140,7 @@
               // var iframe = '<object data="'+pdf_link+'" type="application/pdf"><embed src="'+pdf_link+'"  width="600" height="450" type="application/pdf" /></object>'
               // var iframe = '<object type="application/pdf" data="'+pdf_link+'" width="100%" height="500">No Support</object>'
               $.createModal({
-                  title:'My Title2',
+                  title:'',
                   message: iframe,
                   closeButton:true,
                   scrollable:false

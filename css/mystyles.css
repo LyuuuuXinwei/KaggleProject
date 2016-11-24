@@ -1,6 +1,13 @@
 .navbar{
   background: #363636;
 }
+.row-content {
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px ridge;
+    min-height:50px;
+}
+
 #navbar-icon{
   margin-top: -10px;
 }
