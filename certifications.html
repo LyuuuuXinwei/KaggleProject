@@ -72,7 +72,8 @@
           a.createModal=function(b){
             defaults={title:"",message:"Your Message Goes Here!",closeButton:true,scrollable:false};
             var b=a.extend({},defaults,b);
-            var c=(b.scrollable===true)?'style="max-height: 800px;overflow-y: auto;"':"";
+            // var c=(b.scrollable===true)?'style="max-height: 800px;overflow-y: auto;"':"";
+            var c='style="max-height: 800px;overflow-y: auto;"';
             html='<div class="modal fade" id="myModal">';
             html+='<div class="modal-dialog">';
             html+='<div class="modal-content">';
