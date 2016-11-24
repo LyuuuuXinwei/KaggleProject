@@ -20,7 +20,7 @@
   padding-bottom: 60%;
   padding-top: 30px;
   height: 0;
-  overflow: scroll;;
+  overflow: hidden;;
 }
 
 .iframe-container iframe{
