@@ -32,8 +32,7 @@
 }
 .caption{
   max-width:auto;
-  max-height:220px;
-  min-height:220px;
+  height:200px;
   position:relative;
   overflow:hidden;
 }
