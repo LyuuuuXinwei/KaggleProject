@@ -143,7 +143,18 @@
           </div>
       </div>
     </div>
-    <div id="map" style="width:400px;height:400px;background:yellow"></div>
+    <div id="map" style="height:400px;width:100%; background:yellow;"></div>
+      <script>
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: -34.397, lng: 150.644},
+              zoom: 8
+            });
+          }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbbY-a8kMlFWpvezQZVAhF6VlD2ddHzqM&callback=initMap"
+          async defer></script>
     <footer class="row-footer">
       <!-- Set height and width with CSS -->
 
@@ -153,17 +164,6 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Add Google Maps -->
-    <script src="js/google2.js"></script>
-    <script>
-    function myMap() {
-      var mapCanvas = document.getElementById("map");
-      var mapOptions = {
-        center: new google.maps.LatLng(51.5, -0.2), zoom: 10
-      };
-      var map = new google.maps.Map(mapCanvas, mapOptions);
-    }
-    </script>
 
 
 
