@@ -169,16 +169,17 @@
         mapTypeId:google.maps.MapTypeId.ROADMAP
       };
 
-      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-      var marker = new google.maps.Marker({
-        position:myCenter,
-      });
+        var marker = new google.maps.Marker({
+          position:myCenter,
+        });
 
-      marker.setMap(map);
+        marker.setMap(map);
+
+        google.maps.event.addDomListener(window, 'load', initialize);
       }
 
-      google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4ndbs90q_Qi9T4iJKXK1bW5RtmWh73ME&callback=initMap"
