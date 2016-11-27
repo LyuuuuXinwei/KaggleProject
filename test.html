@@ -155,32 +155,22 @@
       }
 
     </script> -->
-    <script>
+    <div id="map" style="width:500px;height:320px"></div>
+    <script type="text/javascript">
+    function initialize() {
+      var mp = new BMap.Map('map');
+      mp.centerAndZoom(new BMap.Point(121.491, 31.233), 11);
+    }
 
-      function initMap() {
-        var myCenter = new google.maps.LatLng(32.1620990494,118.6985419701);
+    function loadScript() {
+      var script = document.createElement("script");
+      script.src = "http://api.map.baidu.com/api?v=2.0&ak=lTBuLxkGg3FO86xGyU4BCjsrul3LCUMx&callback=initialize";//此为v2.0版本的引用方式
+      // http://api.map.baidu.com/api?v=1.4&ak=您的密钥&callback=initialize"; //此为v1.4版本及以前版本的引用方式
+      document.body.appendChild(script);
+    }
 
-        var mapProp = {
-        center:myCenter,
-        zoom:12,
-        scrollwheel:false,
-        draggable:false,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-        var marker = new google.maps.Marker({
-          position:myCenter,
-        });
-
-        marker.setMap(map);
-      }
-
+    window.onload = loadScript;
     </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4ndbs90q_Qi9T4iJKXK1bW5RtmWh73ME&callback=initMap"
-          async defer></script>
     <footer class="row-footer">
       <!-- Set height and width with CSS -->
 
