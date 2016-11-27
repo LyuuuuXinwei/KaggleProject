@@ -143,11 +143,23 @@
           </div>
       </div>
     </div>
+    <!-- <div id="map" style="height:400px;width:100%; background:yellow;"></div>
+    <script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          scrollwheel: false,
+          zoom: 8
+        });
+      }
+
+    </script> -->
     <div id="googleMap" style="height:400px;width:100%; background:yellow;"></div>
     <script>
       var myCenter = new google.maps.LatLng(41.878114, -87.629798);
 
-      function initialize() {
+      function initMap() {
         var mapProp = {
         center:myCenter,
         zoom:12,
