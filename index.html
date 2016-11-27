@@ -143,7 +143,8 @@
           </div>
       </div>
     </div>
-    <div id="googleMap" style="height:400px;width:100%; background:yellow;"></div>
+    <div id="map" style="width:100%; height:400px;"></div>
+
     <footer class="row-footer">
       <!-- Set height and width with CSS -->
 
@@ -154,33 +155,32 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Add Google Maps -->
-    <script>
 
-      function initMap() {
-        var myCenter = new google.maps.LatLng(32.1620990494,118.6985419701);
+          <script type="text/javascript">
+            function initialize() {
+              var mp = new BMap.Map('map');
+              var point = new BMap.Point(118.7050, 32.1679);
+              mp.centerAndZoom(point, 15);
+              // map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
 
-        var mapProp = {
-        center:myCenter,
-        zoom:12,
-        scrollwheel:false,
-        draggable:false,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
+              var marker = new BMap.Marker(point);  // 创建标注
+              mp.addOverlay(marker);               // 将标注添加到地图中
+              marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
 
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+              mp.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+              mp.setCurrentCity("南京");          // 设置地图显示的城市 此项是必须设置的
+              mp.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+            }
 
-        var marker = new google.maps.Marker({
-          position:myCenter,
-        });
+            function loadScript() {
+              var script = document.createElement("script");
+              script.src = "https://api.map.baidu.com/api?v=2.0&ak=6ArLh6TTXKlEoBzrIOlezLV185KbIQvA&s=1&callback=initialize";//此为v2.0版本的引用方式
+              // http://api.map.baidu.com/api?v=1.4&ak=您的密钥&callback=initialize"; //此为v1.4版本及以前版本的引用方式
+              document.body.appendChild(script);
+            }
 
-        marker.setMap(map);
-      }
-
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4ndbs90q_Qi9T4iJKXK1bW5RtmWh73ME&callback=initMap"
-          async defer></script>
-
+            window.onload = loadScript;
+          </script>
 </body>
 
 </html>
