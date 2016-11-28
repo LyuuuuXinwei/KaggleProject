@@ -1,17 +1,30 @@
 /*************************************************for gallery*************************************************/
-.item {
-    width: 500px;
-    float: left;
+
+img {
+    filter: gray; /* IE6-9 */
+    /*-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */*/
+      -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+      box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+      margin-bottom:20px;
+      display:block;
+      position:relative;
+      -webkit-transition:all .8s linear;
+      transition:all .8s linear;
 }
-.item img {
-    display: block;
-    height: 309px;
-    width: 100%;
+
+img:hover {
+  filter: none; /* IE6-9 */
+  /*-webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */*/
+  -ms-transform:scale(1.02);
+  -webkit-transform:scale(1.02);
+  transform:scale(1.02);
 }
+
 
 /*************************************************for hover*************************************************/
 .hovereffect {
-  float:left;
+  /*float:left;*/
   overflow:hidden;
   position:relative;
   text-align:center;
