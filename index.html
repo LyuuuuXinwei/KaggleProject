@@ -145,6 +145,7 @@
     </div>
     <div class="container">
       <div id="map" style="width:100%; height:400px;"></div>
+      <div id="r-result"></div>
     </div>
 
     <footer class="row-footer">
@@ -172,6 +173,10 @@
               mp.addControl(new BMap.MapTypeControl());   //添加地图类型控件
               mp.setCurrentCity("南京");          // 设置地图显示的城市 此项是必须设置的
               mp.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+              var sContent ="江苏省南京市浦口高新技术开发区北斗大厦12楼";
+              var infoWindow = new Bmap.InfoWindow(sContent);
+              mp.openInfoWindow(infoWindow, point);
             }
 
             function loadScript() {
