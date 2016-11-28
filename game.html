@@ -16,6 +16,7 @@
     <link href="css/mystyles.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/imgHovereffects.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -68,26 +69,26 @@
       <h1>I am game page</h1>
       <h1>Masonry - columnWidth</h1>
 
-      <div id="images">
-    <div class="item">
-        <img src="./img/game-page/archlord.jpg">
+    <div id="images">
+      <div class="item hovereffect">
+          <img src="./img/game-page/archlord.jpg">
+      </div>
+      <div class="item hovereffect">
+          <img src="./img/game-page/tianlongbabu.jpg">
+      </div>
+      <div class="item hovereffect">
+          <img src="./img/game-page/dota.jpg">
+      </div>
+      <div class="item hovereffect">
+          <img src="./img/game-page/tianxia.jpg">
+      </div>
+      <div class="item hovereffect">
+          <img src="./img/game-page/kings_honor.jpg">
+      </div>
+      <div class="item hovereffect">
+          <img src="./img/game-page/tobecontinued.jpg">
+      </div>
     </div>
-    <div class="item">
-        <img src="./img/game-page/tianlongbabu.jpg">
-    </div>
-    <div class="item">
-        <img src="./img/game-page/dota.jpg">
-    </div>
-    <div class="item">
-        <img src="./img/game-page/tianxia.jpg">
-    </div>
-    <div class="item">
-        <img src="./img/game-page/kings_honor.jpg">
-    </div>
-    <div class="item">
-        <img src="./img/game-page/tobecontinued.jpg">
-    </div>
-</div>
 
     </div>
     <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button"
@@ -109,29 +110,29 @@
           $(function () {
 
       var $container = $('#container').masonry({
-          itemSelector: '.item',
+          item hovereffectSelector: '.item hovereffect',
           columnWidth: 200
       });
 
       // reveal initial images
-      $container.masonryImagesReveal($('#images').find('.item'));
+      $container.masonryImagesReveal($('#images').find('.item hovereffect'));
       });
 
-      $.fn.masonryImagesReveal = function ($items) {
+      $.fn.masonryImagesReveal = function ($item hovereffects) {
       var msnry = this.data('masonry');
-      var itemSelector = msnry.options.itemSelector;
+      var item hovereffectSelector = msnry.options.item hovereffectSelector;
       // hide by default
-      $items.hide();
+      $item hovereffects.hide();
       // append to container
-      this.append($items);
-      $items.imagesLoaded().progress(function (imgLoad, image) {
-          // get item
+      this.append($item hovereffects);
+      $item hovereffects.imagesLoaded().progress(function (imgLoad, image) {
+          // get item hovereffect
           // image is imagesLoaded class, not <img>, <img> is image.img
-          var $item = $(image.img).parents(itemSelector);
-          // un-hide item
-          $item.show();
+          var $item hovereffect = $(image.img).parents(item hovereffectSelector);
+          // un-hide item hovereffect
+          $item hovereffect.show();
           // masonry does its thing
-          msnry.appended($item);
+          msnry.appended($item hovereffect);
       });
 
       return this;
