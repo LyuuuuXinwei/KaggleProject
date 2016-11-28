@@ -2,9 +2,9 @@
   background-color: #0d3ba9;
   border-color: #5165ce;
 }
-/*.navbar-default .navbar-brand {
+.navbar-default .navbar-brand {
   color: #ecf0f1;
-}*/
+}
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #ecdbff;
