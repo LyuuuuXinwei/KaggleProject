@@ -66,6 +66,29 @@
   </nav>
     <div class="container" style="padding-top:70px">
       <h1>I am game page</h1>
+      <h1>Masonry - columnWidth</h1>
+
+      <div id="images">
+    <div class="item">
+        <img src="./img/game-page/archlord.jpg">
+    </div>
+    <div class="item">
+        <img src="./img/game-page/tianlongbabu.jpg">
+    </div>
+    <div class="item">
+        <img src="./img/game-page/dota.jpg">
+    </div>
+    <div class="item">
+        <img src="./img/game-page/tianxia.jpg">
+    </div>
+    <div class="item">
+        <img src="./img/game-page/kings_honor.jpg">
+    </div>
+    <div class="item">
+        <img src="./img/game-page/tobecontinued.jpg">
+    </div>
+</div>
+
     </div>
     <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button"
       title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
@@ -79,6 +102,41 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/masonry.pkgd.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <!--  mansonry script-->
+    <script>
+          $(function () {
+
+      var $container = $('#container').masonry({
+          itemSelector: '.item',
+          columnWidth: 200
+      });
+
+      // reveal initial images
+      $container.masonryImagesReveal($('#images').find('.item'));
+      });
+
+      $.fn.masonryImagesReveal = function ($items) {
+      var msnry = this.data('masonry');
+      var itemSelector = msnry.options.itemSelector;
+      // hide by default
+      $items.hide();
+      // append to container
+      this.append($items);
+      $items.imagesLoaded().progress(function (imgLoad, image) {
+          // get item
+          // image is imagesLoaded class, not <img>, <img> is image.img
+          var $item = $(image.img).parents(itemSelector);
+          // un-hide item
+          $item.show();
+          // masonry does its thing
+          msnry.appended($item);
+      });
+
+      return this;
+      };
+    </script>
     <script>
           $(document).ready(function(){
          $(window).scroll(function () {
