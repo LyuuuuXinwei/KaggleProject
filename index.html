@@ -175,17 +175,18 @@
               mp.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
               var sContent ="江苏省南京市浦口高新技术开发区北斗大厦12楼";
-              var infoWindow = new BMap.InfoWindow(sContent);
+
               var opts = {
                 width : 200,     // 信息窗口宽度
                 height: 100,     // 信息窗口高度
                 title : "北斗大厦" , // 信息窗口标题
               }
+              var infoWindow = new BMap.InfoWindow(sContent, opts);
               mp.openInfoWindow(infoWindow, point);
 
               marker.addEventListener("click", function(){
                   mp.openInfoWindow(infoWindow,point); //开启信息窗口
-                }
+                });
             }
 
             function loadScript() {
