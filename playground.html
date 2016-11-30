@@ -75,14 +75,17 @@
                                 <div class="carousel slide" id="myCarousel">
                                     <!-- Carousel items -->
                                     <div class="carousel-inner">
-                                        <div class="active item" data-slide-number="0">
-                                        <img src="./img/game-page/archlord.jpg"></div>
+                                      <div class="active item" data-slide-number="0">
+                                        <img src="./img/game-page/archlord.jpg">
+                                      </div>
 
-                                        <div class="item" data-slide-number="1">
-                                        <img src="./img/game-page/tianlongbabu.jpg"></div>
+                                      <div class="item" data-slide-number="1">
+                                        <img src="./img/game-page/tianlongbabu.jpg">
+                                      </div>
 
-                                        <div class="item" data-slide-number="2">
-                                        <img src="./img/game-page/dota.jpg"></div>
+                                      <div class="item" data-slide-number="2">
+                                        <img src="./img/game-page/dota.jpg">
+                                      </div>
 
                                         <div class="item" data-slide-number="3">
                                         <img src="./img/game-page/tianxia.jpg"></div>
@@ -188,9 +191,6 @@
       title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
-    <footer class="row-footer">
-
-    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -210,6 +210,7 @@
               var id_selector = $(this).attr("id");
               var id = id_selector.substr(id_selector.length -1);
               var id = parseInt(id);
+              // window.alert(id);
               $('#myCarousel').carousel(id);
       });
 
@@ -217,6 +218,7 @@
       // When the carousel slides, auto update the text
       $('#myCarousel').on('slid', function (e) {
               var id = $('.item.active').data('slide-number');
+              window.alert(id);
               $('#carousel-text').html($('#slide-content-'+id).html());
       });
 });
